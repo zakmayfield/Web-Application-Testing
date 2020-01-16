@@ -15,11 +15,11 @@ const Dashboard = (props) => {
         </div>
 
         <div>
-          <button>Foul</button>
+          <button onClick={props.addFoul}>Foul</button>
         </div>
 
         <div>
-          <button>Hit</button>
+          <button onClick={props.addHit}>Hit</button>
         </div>
       </div>
     </div>
