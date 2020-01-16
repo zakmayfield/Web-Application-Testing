@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Display = ({ batterName, strike, ball }) => {
+const Display = ({ nameOfBatter, strike, ball }) => {
   return (
     <div className="displayComponent">
       <div className="displayBox">
         <div>
-          <p>{batterName}</p>
+          <p>{nameOfBatter}</p>
         </div>
 
         <div>

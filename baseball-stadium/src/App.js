@@ -46,7 +46,7 @@ function App() {
     <div className="App">
       <h1>Batter Info</h1>
       <Scoreboard
-        batterName={nameOfBatter}
+        nameOfBatter={nameOfBatter}
         strike={strike}
         ball={ball}
         addHit={addHit}
