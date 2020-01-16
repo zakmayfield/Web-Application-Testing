@@ -1,22 +1,22 @@
 import React from 'react';
 
-const Display = (props) => {
+const Display = ({ batterName, strike, ball }) => {
   return (
     <div className="displayComponent">
       <div className="displayBox">
         <div>
-          <p>{props.batterName}</p>
+          <p>{batterName}</p>
         </div>
 
         <div>
           <div className="strikeBox">
             <p className="strikeBoxTitle">Strikes</p>
-            <p className="strikeBoxNum">{props.strike}</p>
+            <p className="strikeBoxNum">{strike}</p>
           </div>
 
           <div className="ballBox">
             <p className="ballBoxTitle">Balls</p>
-            <p className="ballBoxNum">{props.ball}</p>
+            <p className="ballBoxNum">{ball}</p>
           </div>
         </div>
       </div>
