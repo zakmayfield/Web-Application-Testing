@@ -3,7 +3,7 @@ import './App.css';
 //component imports
 import Scoreboard from './components/Scoreboard';
 
-function App() {
+export const App = () => {
 
   const [nameOfBatter, setNameOfBatter] = useState('Jon Snow');
   const [strike, setStrike] = useState(0);
@@ -57,5 +57,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

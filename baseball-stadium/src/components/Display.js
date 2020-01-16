@@ -10,13 +10,13 @@ const Display = ({ nameOfBatter, strike, ball }) => {
 
         <div>
           <div className="strikeBox">
-            <p className="strikeBoxTitle">Strikes</p>
-            <p className="strikeBoxNum">{strike}</p>
+            <p className="strikeBoxTitle" data-testid="strikeBox">Strikes</p>
+            <p className="strikeBoxNum" data-testid="strikeCount">{strike}</p>
           </div>
 
           <div className="ballBox">
-            <p className="ballBoxTitle">Balls</p>
-            <p className="ballBoxNum">{ball}</p>
+            <p className="ballBoxTitle" data-testid="strikeBox">Balls</p>
+            <p className="ballBoxNum" data-testid="ballCount">{ball}</p>
           </div>
         </div>
       </div>

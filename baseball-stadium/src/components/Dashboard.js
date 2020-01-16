@@ -5,11 +5,11 @@ const Dashboard = (props) => {
     <div className="dashboardComponent">
       <div className="btnBox">
         <div>
-          <button onClick={props.addStrike}>Strike</button>
+          <button onClick={props.addStrike} data-testid="strikeBtn">Strike</button>
         </div>
 
         <div>
-          <button onClick={props.addBall}>Ball</button>
+          <button onClick={props.addBall} data-testid="ballBtn">Ball</button>
         </div>
 
         <div>
