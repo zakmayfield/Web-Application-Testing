@@ -43,8 +43,7 @@ const Scoreboard = () => {
 
   return (
     <div>
-      <h1>Scoreboard Component</h1>
-      <Display strike={strike} ball={ball} name={nameOfBatter} />
+      <Display strike={strike} ball={ball} batterName={nameOfBatter}/>
       <Dashboard addHit={addHit} addStrike={addStrike} addBall={addBall} addFoul={addFoul} />
     </div>
   )

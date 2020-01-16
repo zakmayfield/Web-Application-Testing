@@ -6,6 +6,7 @@ import Scoreboard from './components/Scoreboard';
 function App() {
   return (
     <div className="App">
+      <h1>Batter Info</h1>
       <Scoreboard />
     </div>
   );

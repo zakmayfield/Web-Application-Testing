@@ -42,6 +42,13 @@
 
 {/* Stylying for the scoreboard*/}
 
+.displayComponent{
+  margin-bottom: 5vh;
+}
+
+
+
+
 .strikeBox, .ballBox{
   display: inline-flex;
   flex-flow: column;
@@ -53,4 +60,16 @@
 
 .strikeBoxTitle, .ballBoxTitle{
   margin: 0 2vw;
+}
+
+
+
+
+.btnBox{
+  display: flex;
+  justify-content: center;
+}
+
+.btnBox button{
+  margin: 0 1vw;
 }
