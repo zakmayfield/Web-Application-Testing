@@ -8,7 +8,6 @@ const Display = ({ teamName, strike, ball, outs, handleChange }) => {
           <input
             type="text"
             placeholder="enter team name"
-            value={teamName}
             onChange={handleChange}
           />
           <p className="teamName">{teamName}</p>

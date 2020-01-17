@@ -5,7 +5,7 @@ import Scoreboard from './components/Scoreboard';
 
 export const App = () => {
 
-  const [teamName, setTeamName] = useState('Cincinnati Reds');
+  const [teamName, setTeamName] = useState('Enter Team Name Above');
   const [strike, setStrike] = useState(0);
   const [ball, setBall] = useState(0);
   const [outs, setOuts] = useState(0);
@@ -52,6 +52,12 @@ export const App = () => {
       setStrike(strike + 1)
     }
   }
+
+  const resetBoard = () => {
+    setOuts(0)
+    setStrike(0)
+    setBall(0)
+  }
   
   const handleChange = e => {
     setTeamName(e.target.value)
@@ -69,6 +75,7 @@ export const App = () => {
         addStrike={addStrike}
         outs={outs}
         handleChange={handleChange}
+        resetBoard={resetBoard}
       />
     </div>
   );

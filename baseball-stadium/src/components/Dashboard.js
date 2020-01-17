@@ -19,6 +19,10 @@ const Dashboard = (props) => {
         <div>
           <button onClick={props.addHit} data-testid="hitBtn">Hit</button>
         </div>
+
+        <div>
+          <button onClick={props.resetBoard}>Reset Board</button>
+        </div>
       </div>
     </div>
   )
