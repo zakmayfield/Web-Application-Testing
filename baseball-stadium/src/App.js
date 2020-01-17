@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 //component imports
 import Scoreboard from './components/Scoreboard';
 
 export const App = () => {
 
-  const [nameOfBatter, setNameOfBatter] = useState('Jon Snow');
+  const [teamName, setTeamName] = useState('Cincinnati Reds');
   const [strike, setStrike] = useState(0);
   const [ball, setBall] = useState(0);
+  const [outs, setOuts] = useState(0);
 
   const addHit = () => {
     setStrike(0)
@@ -15,6 +16,16 @@ export const App = () => {
   }
   
   const addStrike = () => {
+    if(outs >= 3){
+      setOuts(0)
+      setStrike(0)
+      setBall(0)
+    }
+
+    if(strike >= 2){
+      setOuts(outs + 1)
+    } 
+
     if(strike >= 2){
       setStrike(0)
       setBall(0)
@@ -41,18 +52,23 @@ export const App = () => {
       setStrike(strike + 1)
     }
   }
+  
+  const handleChange = e => {
+    setTeamName(e.target.value)
+  }
 
   return (
     <div className="App">
-      <h1>Batter Info</h1>
       <Scoreboard
-        nameOfBatter={nameOfBatter}
+        teamName={teamName}
         strike={strike}
         ball={ball}
         addHit={addHit}
         addBall={addBall}
         addFoul={addFoul}
         addStrike={addStrike}
+        outs={outs}
+        handleChange={handleChange}
       />
     </div>
   );

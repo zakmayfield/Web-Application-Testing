@@ -1,11 +1,18 @@
 import React from 'react';
 
-const Display = ({ nameOfBatter, strike, ball }) => {
+const Display = ({ teamName, strike, ball, outs, handleChange }) => {
   return (
     <div className="displayComponent">
       <div className="displayBox">
-        <div>
-          <p>{nameOfBatter}</p>
+        <div className="nameOutsBox">
+          <input
+            type="text"
+            placeholder="enter team name"
+            value={teamName}
+            onChange={handleChange}
+          />
+          <p className="teamName">{teamName}</p>
+          <p className="outsTitle">Outs: {outs}</p>
         </div>
 
         <div>
